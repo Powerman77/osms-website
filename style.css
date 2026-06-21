@@ -516,10 +516,40 @@ h1, h2, h3, h4{
   background: var(--paper);
   padding: 38px 32px;
   position: relative;
-  transition: background 0.25s;
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+  border-top: 3px solid transparent;
 }
 
-.biz-card:hover{ background: var(--white); }
+.biz-card:hover{
+  background: var(--white);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -16px rgba(0,0,0,0.35);
+  border-top-color: var(--rust);
+  z-index: 2;
+}
+
+.biz-icon{
+  width: 48px;
+  height: 48px;
+  background: var(--graphite);
+  border: 1px solid var(--rust);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.biz-icon svg{
+  width: 24px;
+  height: 24px;
+  color: var(--rust);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.biz-icon.olive-icon{ border-color: var(--olive); }
+.biz-icon.olive-icon svg{ color: var(--olive); }
 
 .biz-card .biz-no{
   font-family: var(--font-mono);
