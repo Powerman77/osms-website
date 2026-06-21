@@ -694,6 +694,39 @@ h1, h2, h3, h4{
   color: var(--rust);
 }
 
+.section-icon-row{
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.section-icon{
+  width: 56px;
+  height: 56px;
+  background: var(--graphite);
+  border: 1px solid var(--rust);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.section-icon svg{
+  width: 28px;
+  height: 28px;
+  color: var(--rust);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+}
+
+.section-icon.olive-icon{
+  border-color: var(--olive);
+}
+.section-icon.olive-icon svg{
+  color: var(--olive);
+}
+
 .info-card h4{
   font-size: 1.15rem;
   text-transform: uppercase;
