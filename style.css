@@ -278,26 +278,42 @@ h1, h2, h3, h4{
 /* ---------- Hero (manifest / weighbridge ticket motif) ---------- */
 
 .hero{
-  background: var(--graphite);
+  background: linear-gradient(135deg, #20262E 0%, #1A1F26 45%, #14181E 100%);
   color: var(--white);
   position: relative;
   overflow: hidden;
   padding: 88px 0 0;
 }
 
+.hero-glow{
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(200,80,26,0.22) 0%, rgba(200,80,26,0.06) 45%, transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-grid-bg{
   position:absolute;
   inset:0;
   background-image:
-    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
   background-size: 42px 42px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.3));
   pointer-events:none;
 }
 
 .hero .wrap{
   position: relative;
   z-index: 2;
+}
+
+.hero-glow{
+  z-index: 1;
 }
 
 .hero-inner{
@@ -354,6 +370,7 @@ h1, h2, h3, h4{
   padding: 26px 26px 20px;
   border: 1px solid var(--paper-line);
   position: relative;
+  box-shadow: 0 24px 60px -20px rgba(0,0,0,0.45);
 }
 .manifest-card::before{
   content: 'CERTIFIED MANIFEST';
